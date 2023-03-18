@@ -1,0 +1,83 @@
+@import url(./reset.css);
+:root {
+  --color-bolder-color: #cccccc;
+  --color-box-shadow: #eee;
+  --color-button-bg-color: #f8f8f8;
+  --color-text-primary: #0f0f0f;
+  --color-text-descipt: #606060;
+}
+
+/* App.jsx */
+.App {
+  width: 70%;
+  margin: 0 auto;
+}
+.header {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  column-gap: 10%;
+}
+.img-logo {
+  flex: 0 0 auto;
+  width: 90px;
+  height: 20px;
+  padding: 10px 0;
+}
+form {
+  flex: 1 0 auto;
+  display: flex;
+}
+input[type="text"] {
+  flex: 1 0 auto;
+  border-radius: 40px;
+  position: relative;
+  min-width: 80px;
+  height: 40px;
+  border-radius: 40px 0 0 40px;
+  box-shadow: inset 0 1px 2px var(--color-box-shadow);
+  border: 1px solid var(--color-bolder-color);
+  caret-color: var(--color-text-primary);
+  padding: 0;
+}
+input[type="submit"] {
+  height: 42px;
+  width: 64px;
+  border-radius: 0 40px 40px 0;
+  background-color: var(--color-button-bg-color);
+  border: 1px solid var(--color-bolder-color);
+}
+
+.content {
+  padding: 30px 0;
+}
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card-item {
+  flex: 0 0 250px;
+  margin: 0 8px 40px 8px;
+}
+.card-item.detail {
+  display: flex;
+  flex-wrap: nowrap;
+}
+.card-item > img {
+  border-radius: 15px;
+  width: 250px;
+}
+.card-item__desc.detail {
+  flex: 1 0 auto;
+}
+.card-item__desc > h2 {
+  font-size: 0.8rem;
+  margin: 12px 3px 6px 3px;
+  color: var(--color-text-primary);
+}
+.card-item__desc > h3 {
+  font-size: 0.7rem;
+  line-height: 1rem;
+  color: var(--color-text-descipt);
+}
