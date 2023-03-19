@@ -10,8 +10,8 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import ContentsList from "./components/Contents/contents-list";
-import DetailContent from "./components/Contents/detail-content";
+import ContentsList from "components/Contents/contents-list";
+import DetailContent from "components/Contents/detail-content";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
