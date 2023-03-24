@@ -1,38 +1,25 @@
-@import url(reset.css);
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html {
-  font-size: 14px;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  @apply flex flex-col items-center;
+  @apply bg-zinc-900 text-gray-50;
+  overflow-x: hidden;
 }
 
-@media only screen and (min-width: 720px) {
-  html {
-    font-size: 16px;
-  }
+#root {
+  @apply w-full max-w-screen-xl;
 }
 
-@media only screen and (min-width: 960px) {
-  html {
-    font-size: 18px;
-  }
-}
-
-@media only screen and (min-width: 1240px) {
-  html {
-    font-size: 22px;
-  }
-}
-
-h1 {
-  font-size: 2.5rem; /* 56px, 63px, 70px o 84px */
-}
-
-h2 {
-  font-size: 0.8rem; /* 40px, 45px, 50px, 60px */
-}
-
-h3 {
-  font-size: 0.65rem; /* 32px, 36px, 40px, 48px */
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }

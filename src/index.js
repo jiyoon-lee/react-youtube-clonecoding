@@ -10,16 +10,17 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-import ContentsList from "components/Contents/contents-list";
-import DetailContent from "components/Contents/detail-content";
+import NotFound from "pages/NotFound";
+import Videos from "pages/Videos";
+import VideoDetail from "pages/VideoDetail";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<App />}>
-      <Route index element={<ContentsList />} />
-      <Route path="/videos" element={<ContentsList />} />
-      <Route path="/videos/:keyword" element={<ContentsList />} />
-      <Route path="/videos/watch/:videoId" element={<DetailContent />} />
+    <Route path="/" element={<App />} errorElement={<NotFound />}>
+      <Route index element={<Videos />} />
+      <Route path="/videos" element={<Videos />} />
+      <Route path="/videos/:keyword" element={<Videos />} />
+      <Route path="/videos/watch/:videoId" element={<VideoDetail />} />
     </Route>
   )
 );

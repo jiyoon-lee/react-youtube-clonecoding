@@ -2,13 +2,23 @@ import React from "react";
 import "./index.css";
 
 import { Outlet } from "react-router-dom";
-import Header from "./components/Header/header";
+import SearchHeader from "components/SearchHeader";
+
+import { QueryClientProvider, QueryClient } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+import { YoutubeApiProvider } from "context/YoutubeApiContext";
 
 function App() {
+  const queryClient = new QueryClient();
   return (
-    <div className="App w-4/5 mx-auto">
-      <Header />
-      <Outlet />
+    <div>
+      <SearchHeader />
+      <YoutubeApiProvider>
+        <QueryClientProvider client={queryClient}>
+          <Outlet />
+          <ReactQueryDevtools initialIsOpen={true} />
+        </QueryClientProvider>
+      </YoutubeApiProvider>
     </div>
   );
 }
